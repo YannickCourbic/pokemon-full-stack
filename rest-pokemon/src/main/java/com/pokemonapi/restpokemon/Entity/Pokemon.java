@@ -1,10 +1,8 @@
 package com.pokemonapi.restpokemon.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Data;
-
-import java.util.HashMap;
-import java.util.List;
 @Data
 @Entity
 public class Pokemon {
@@ -14,23 +12,23 @@ public class Pokemon {
     @ManyToOne
     private Generation generation;
     private String category;
-    @ElementCollection
-    private HashMap<String , String> name;
-    @ElementCollection
-    private HashMap<String , String> sprites;
-    @ElementCollection
-    private List<String> types;
-    @ElementCollection
-    private HashMap<String , Long> stats;
-    @ElementCollection
-    private HashMap<String, Object> resistances;
-    @ElementCollection
-    private HashMap<String , Object> evolution;
+    @Column(columnDefinition = "json")
+    private String name;
+    @Column(columnDefinition = "json")
+    private String sprites;
+    @Column(columnDefinition = "json")
+    private String types;
+    @Column(columnDefinition = "json")
+    private String stats;
+    @Column(columnDefinition = "json")
+    private String resistances;
+    @Column(columnDefinition = "json")
+    private String evolution;
     private String height;
     private String weight;
-    @ElementCollection
-    private List<String> egg_groups;
-    @ElementCollection
-    private HashMap<String , Long> sexe;
+    @Column(columnDefinition = "json")
+    private String egg_groups;
+    @Column(columnDefinition = "json")
+    private String sexe;
     private Long catchRate;
 }
