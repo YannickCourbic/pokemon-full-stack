@@ -59,7 +59,13 @@ public class GenerationServiceImpl implements GenerationService{
 
     @Override
     public List<Generation> getAllGeneration() {
-        Optional<List<Generation>> optionalGenerations = Optional.of(this.generationRepository.findAll());
-        return optionalGenerations.orElse(null);
+        return this.generationRepository.findAll();
     }
+
+    @Override
+    public Boolean existsByRegion(String region) {
+        return this.generationRepository.existsByRegion(region);
+    }
+
+
 }

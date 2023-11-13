@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.pokemonapi.restpokemon.Entity.Generation;
 import com.pokemonapi.restpokemon.Entity.Pokemon;
 import com.pokemonapi.restpokemon.Repository.GenerationRepository;
+import com.pokemonapi.restpokemon.Repository.PokemonRepository;
 import com.pokemonapi.restpokemon.Service.GenerationService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,8 @@ class RestPokemonApplicationTests {
     private RestTemplate restTemplate;
     @Autowired
     private GenerationService generationService;
+    @Autowired
+    private PokemonRepository pokemonRepository;
     @Test
     void TestCreateGeneation() {
         ArrayList<String> gens = new ArrayList<>();
@@ -68,4 +71,31 @@ class RestPokemonApplicationTests {
         System.out.println(this.generationService.getGeneration(generation));
     }
 
+    @Test
+    void TestExistByRegion(){
+        System.out.println(this.generationRepository.existsByRegion("Johto"));
+    }
+
+    @Test
+    void TestPokemonByPokemonId(){
+        this.pokemonRepository.getPokemonsByPokedexId(194L).stream().forEach(pokemon -> {
+            System.out.println(pokemon.getName());
+        });
+    }
+
+    @Test
+    void TestSearchPokemonByName(){
+        this.pokemonRepository.searchByPokemon("p").stream().forEach(pokemon -> {
+            System.out.println(pokemon.getName());
+        });
+    }
+    @Test
+    void TestPokemonByName(){
+        System.out.println(this.pokemonRepository.findByName("Bulbizarre").get(0).getGeneration().getRegion());
+    }
+
+    @Test
+    void TestPokemonByStade1(){
+        System.out.println(this.pokemonRepository.getPokemonStade1());
+    }
 }

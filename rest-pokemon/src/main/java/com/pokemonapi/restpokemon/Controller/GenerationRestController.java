@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.HashMap;
 
 @RestController
-@RequestMapping("/api/v1/rest/pokemon")
+@RequestMapping("/api/v1/rest/pokemon/gen")
 @CrossOrigin
 public class GenerationRestController {
     @Autowired
@@ -27,6 +27,12 @@ public class GenerationRestController {
             res.put("error" , result.getAllErrors());
             return new ResponseEntity<>(res , HttpStatus.BAD_REQUEST);
         }
+        if(this.generationService.existsByRegion(generation.getRegion())){
+            res.put("message" , "Une erreur est survenu...");
+            res.put("error" , "la région est déjà crée");
+            return new ResponseEntity<>(res , HttpStatus.BAD_REQUEST);
+        }
+
         res.put("message" , "Vous avez crée avec succès la génération");
         res.put("data" , this.generationService.createGeneration(generation));
         return new ResponseEntity<>(res , HttpStatus.CREATED);

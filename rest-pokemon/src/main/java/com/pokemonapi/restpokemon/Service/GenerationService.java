@@ -10,4 +10,5 @@ public interface GenerationService {
     Generation getGeneration(Generation g);
     Generation getGenerationById(Long id);
     List<Generation> getAllGeneration();
+    Boolean existsByRegion(String region);
 }

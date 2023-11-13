@@ -1,0 +1,25 @@
+
+\
+java:S1192"FDefine a constant instead of duplicating this literal "error" 5 times.(Ö¼–¿
+p
+java:S1192"ZDefine a constant instead of duplicating this literal "Une erreur est survenu..." 4 times.(‚’¨·
+^
+java:S1192"HDefine a constant instead of duplicating this literal "message" 9 times.(‚’¨·
+C
+java:S5411"(Use a primitive boolean expression here.(€ŒÕÈùÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¨´Œàÿÿÿÿÿ
+X
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ
+e
+java:S4488"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(çïüßøÿÿÿÿ
+@	java:S106"+Replace this use of System.out by a logger.(¿Îº˜
+^
+java:S4488)"HReplace "@RequestMapping(method = RequestMethod.PUT)" with "@PutMapping"(ïªÎ‘
+@	java:S106-"+Replace this use of System.out by a logger.(¿Îº˜
+c
+java:S44886"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(å®¨şÿÿÿÿ
+^
+java:S4488C"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¾¥‡¤
+f
+java:S1128
+"PRemove this unused import 'org.springframework.validation.annotation.Validated'.(¸ÒÖƒ
