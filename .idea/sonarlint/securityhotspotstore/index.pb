@@ -9,3 +9,35 @@ Urest-pokemon/src/main/java/com/pokemonapi/restpokemon/Service/PokemonServiceImp
 [rest-pokemon/src/main/java/com/pokemonapi/restpokemon/Controller/PokemonRestController.java,1\c\1c47823e1658d07e180b90e316be1d6fd9b1e104
 Å
 Qrest-pokemon/src/main/java/com/pokemonapi/restpokemon/Service/PokemonService.java,7\8\7886216f74306c470a9df6f9fd5622bdce403da5
+U
+%pokemon-front-react/package-lock.json,7\1\712096a82406e83f68218164b3ee869d0bf213ef
+O
+pokemon-front-react/src/App.css,1\9\1926fea1acb43bed1e793f74fe85130ce52894c7
+Q
+!pokemon-front-react/src/index.css,b\b\bb87580448a8854795299e1fedf033a41bf9d99f
+P
+ pokemon-front-react/src/main.jsx,7\2\72ca2b43fe414d95ac414a0a0207904aee170a1c
+O
+pokemon-front-react/src/App.jsx,8\6\86acee6cc408d0d77b853576678aff8039345b76
+R
+"pokemon-front-react/vite.config.js,0\b\0b5083bced718087c3d4351cf6eb9cd2ee340ed2
+A
+postcss.config.js,3\f\3f70684581fd16ab3be77ca959e0138ef3ee8bfb
+B
+tailwind.config.js,0\9\0918cbb76f2c44f223706cec9d31a32cd1177ce4
+A
+package-lock.json,f\a\fa288d1472d29beccb489a676f68739ad365fc47
+<
+package.json,7\0\7030d0b2f71b999ff89a343de08c414af32fc93a
+V
+&pokemon-front-react-v1.0/src/index.css,c\e\ce3d09eb3e2f9d0a8edd19ea3228f6dc138e18e1
+T
+$pokemon-front-react-v1.0/src/App.css,b\8\b89d38de252bfaefb4459c57cbda4d42a73c46ea
+[
++pokemon-front-react-v1.0/tailwind.config.js,5\5\55472556b009d7d6420c72e02d06574dc31d31c2
+U
+%pokemon-front-react-v1.0/src/main.jsx,2\a\2ac3f9c38972ad175a086527652ce6f892b73cca
+T
+$pokemon-front-react-v1.0/src/App.jsx,f\5\f565a160f6b931ff8cfe815e690317d3cb3167db
+b
+2pokemon-front-react-v1.0/src/Components/Navbar.jsx,6\6\66695ef4db31deee6312d26ef60cd31c4fe91911
