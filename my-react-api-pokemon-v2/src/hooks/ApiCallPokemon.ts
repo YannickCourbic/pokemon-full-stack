@@ -10,4 +10,20 @@ export default class ApiCallPokemon {
             });
     }
 
+    static async getPokemonById(id:number | null){
+        return await axios.get(`http://localhost:8080/api/v1/rest/pokemon/identify/${id}` ,
+            {
+                method: 'GET',
+                headers: {"Content-Type": "application/json"}
+            }
+        )
+    }
+    static async getPokemnByPokedexId(id:number|null){
+        return await axios.get(`http://localhost:8080/api/v1/rest/pokemon/pokedex/${id}`, {method:'GET' , headers: {"Content-Type": "application/json"}})
+    }
+
+    static async getPokemonByEggGroups(egg:string|null){
+        return await axios.get(`http://localhost:8080/api/v1/rest/pokemon/eggGroups/${egg}`, {method:'GET' , headers:{"Content-Type": "application/json"}})
+    }
+
 }

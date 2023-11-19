@@ -19,10 +19,29 @@ export  default class Pokemon {
     private _sexe:{male:number, female:number};
     private _catchRate:number;
     private _level100:number;
+    private _talents : [{tc:boolean , name:string}];
     //2.définition des valeurs par défault des pokémons
 
 
-    constructor(id: number, pokedexId: number, generation: Generation, category: string, name: string, sprites: string, types: string, stats: string, resistances: string, evolution: string, height: string, weight: string, eggGroups: string, sexe: string, catchRate: number, level100: number) {
+    constructor(
+        id:number,
+        pokedexId:number,
+        generation:Generation,
+        category:string,
+        name: {en:string , fr:string , jp:string},
+        sprites:{gmax: {shiny:string , regular:string} , shiny:string, regular:string},
+        types:[{name:string,image:string}],
+        stats: { hp:number,atk:number,def:number,vit:number ,spe_atk:number,spe_def:number },
+        resistances:[{name:string , multiplier:number}],
+        evolution:{pre:[{name:string , condition:string , pokedexId:number}] , mega : [{orbre:string , sprites: {shiny:string , regular:string}}] , next:[{name:string , condition:string, pokedexId:number}]},
+        height:string,
+        weight:string,
+        eggGroups:object,
+        sexe:{male:number, female:number},
+        catchRate:number,
+        level100:number,
+        talents:[{tc:boolean, name:string}],
+    ) {
         this._id = id;
         this._pokedexId = pokedexId;
         this._generation = generation;
@@ -39,6 +58,7 @@ export  default class Pokemon {
         this._sexe = sexe;
         this._catchRate = catchRate;
         this._level100 = level100;
+        this._talents = talents;
     }
 
     get id(): number {
@@ -73,7 +93,7 @@ export  default class Pokemon {
         this._category = value;
     }
 
-    get name(): {en:string , fr:string , jp:string} {
+    get name(): {en:string , fr:string , jp:string}  {
         return this._name;
     }
 
@@ -168,5 +188,14 @@ export  default class Pokemon {
     set level100(value: number) {
         this._level100 = value;
     }
+
+    get talents(): [{ tc: boolean; name: string }] {
+        return this._talents;
+    }
+
+    set talents(value: string) {
+        this._talents = JSON.parse(value);
+    }
+
 }
 
